@@ -118,6 +118,7 @@ input[type="text"] {
   margin-right: 25px;
   margin-left: 25px;
   max-width: 250px;
+  min-height: 444px;
 }
 
 .description__head {
@@ -169,7 +170,6 @@ input[type="text"] {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  flex: 1 1 auto;
   width: 100%;
   max-height: 854px;
   flex: 0 0 auto;
@@ -179,11 +179,10 @@ input[type="text"] {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 614px;
   height: 852px;
-  background-image: url(../img/2.png);
+  background-image: url(../img/contentCenter/firstItem.png);
   background-repeat: no-repeat;
-  background-position: auto;
+  background-size: 100% 100%;
   padding-top: 10px;
 }
 
@@ -235,11 +234,11 @@ input[type="text"] {
   justify-content: space-around;
   align-items: flex-start;
   padding-left: 50px;
-  width: 700px;
+
   height: 426px;
 }
 .up {
-  background-image: url(../img/3.png);
+  background-image: url(../img/contentCenter/secondItem.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -282,7 +281,7 @@ input[type="text"] {
   padding-top: 6px;
 }
 .bottom {
-  background-image: url(../img/4.png);
+  background-image: url(../img/contentCenter/thirdItem.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -520,4 +519,63 @@ input[type="text"] {
 }
 .info__2 {
   margin-top: 20px;
+}
+
+@media screen and (min-width: 100px) and (max-width: 1224px) {
+  .container {
+    padding: 0px 10px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1050px) {
+  .navigation {
+    max-height: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 880px) {
+  .prefimg {
+    object-fit: cover;
+  }
+  .item__left {
+    font-size: 38px;
+  }
+  .item__right {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 200px) and (max-width: 768px) {
+  .container {
+    padding: 0 0;
+    max-width: 768px;
+  }
+  .header {
+    flex-wrap: wrap;
+  }
+  .item__left {
+    font-size: 28px;
+  }
+  .item__right {
+    font-size: 34px;
+  }
+  .navigation {
+    flex-wrap: nowrap;
+  }
+  .block {
+    min-width: 250px;
+    max-width: 310px;
+  }
+  .description {
+    max-width: 280px;
+    min-width: 290px;
+    padding-top: 0px;
+    margin-bottom: -5px;
+    padding-bottom: 20px;
+  }
+  .sidebar {
+    height: auto;
+  }
+  .content {
+    padding-left: 0%;
+    display: flex;
+    align-items: center;
+  }
 }
