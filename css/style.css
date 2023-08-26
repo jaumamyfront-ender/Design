@@ -103,6 +103,7 @@ input[type="text"] {
   flex: 1 1 auto;
   align-items: center;
   margin: 0 auto;
+  overflow: hidden;
 }
 .header {
   display: flex;
@@ -248,13 +249,13 @@ input[type="text"] {
 .item__second {
   color: #262f32;
 }
-.form {
+.button__first {
   width: 210px;
   height: 50px;
   border: 1px solid #262f32;
   border-radius: 9px 9px 9px 9px;
 }
-.form p {
+.button__first p {
   color: #262f32;
   font-family: Roboto;
   font-size: 17px;
@@ -264,13 +265,13 @@ input[type="text"] {
   letter-spacing: 0.5px;
   padding-top: 6px;
 }
-.form__second {
+.button__second {
   width: 210px;
   height: 50px;
   border: 1px solid #ffffff;
   border-radius: 9px 9px 9px 9px;
 }
-.form__second p {
+.button__second p {
   color: #ffffff;
   font-family: Roboto;
   font-size: 17px;
@@ -292,6 +293,7 @@ input[type="text"] {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .block__left {
   width: 458px;
@@ -299,15 +301,12 @@ input[type="text"] {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url(../img/5.png);
+  background-image: url(../img/Footer/backgroundItem.png);
   background-size: cover;
   background-repeat: no-repeat;
   align-items: center;
 }
 .item__block {
-  width: 343px;
-  height: 111px;
-  margin-left: 48px;
   margin-top: 74px;
 }
 .stylingdescription {
@@ -370,11 +369,10 @@ input[type="text"] {
 }
 
 .block__right {
-  width: 908px;
   height: 715px;
 }
 .block__right {
-  background-image: url(../img/gory_doroga_povorot_219954_1920x1080.jpg);
+  background-image: url(../img/Footer/landscape.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -387,7 +385,7 @@ input[type="text"] {
   padding-left: 50px;
 }
 .wr {
-  width: 620px;
+  width: 100%;
   height: 585px;
   display: flex;
   flex-direction: column;
@@ -418,75 +416,49 @@ input[type="text"] {
   font-size: 48px;
   color: #ffffff;
 }
-
-.forms__settings {
+.form {
+  max-width: 620px;
+  width: 100%;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  width: 660px;
-  height: 232px;
+  justify-content: space-between;
+  padding-right: 40px;
 }
-.name {
-  display: flex;
-  width: 302px;
-  height: 55px;
-  background: transparent;
-  border: 1px solid #ffffff;
-  border-radius: 9px 9px 9px 9px;
-  margin-right: 13px;
-  padding-left: 20px;
+
+.form input,
+.form textarea {
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  padding: 10px 15px;
+}
+
+.form input::-webkit-input-placeholder,
+.form textarea::-webkit-input-placeholder {
   color: rgb(255, 255, 255);
 }
-.name::placeholder {
-  display: block;
-  height: 13px;
-  color: #fffcfc;
-  font-family: Roboto;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 32px;
-  letter-spacing: 0.5px;
-  overflow: visible;
+.form input::-moz-placeholder,
+.form textarea::-moz-placeholder {
+  color: white;
+} /* Firefox 19+ */
+.form input:-moz-placeholder,
+.form textarea:-moz-placeholder {
+  color: white;
+} /* Firefox 18- */
+.form input:-ms-input-placeholder,
+.form textarea:-ms-input-placeholder {
+  color: white;
 }
-.email {
-  display: flex;
-  width: 302px;
-  height: 55px;
-  background: transparent;
-  border: 1px solid #ffffff;
-  border-radius: 9px 9px 9px 9px;
-  margin-right: 13px;
-  padding-left: 20px;
-  color: rgb(255, 255, 255);
+
+.form input {
+  width: 48%;
 }
-.email::placeholder {
-  display: block;
-  height: 13px;
-  color: #fffcfc;
-  font-family: Roboto;
-  font-size: 17px;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  overflow: visible;
-}
-.message {
-  width: 617px;
-  height: 159px;
-  border: 1px solid #ffffff;
-  border-radius: 9px 9px 9px 9px;
-  background: transparent;
-  padding-left: 20px;
-  padding-top: 20px;
-  color: rgb(255, 255, 255);
-}
-.message::placeholder {
-  height: 13px;
-  color: #fffcfc;
-  font-family: Roboto;
-  font-size: 17px;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  overflow: visible;
+
+.form textarea {
+  width: 100%;
+  min-height: 124px;
 }
 .social {
   width: 465px;
@@ -517,8 +489,11 @@ input[type="text"] {
   height: 40px;
   border-radius: 9px 9px 9px 9px;
 }
-.info__2 {
+.info__info {
   margin-top: 20px;
+}
+.container__form {
+  max-width: 700px;
 }
 
 @media screen and (min-width: 100px) and (max-width: 1224px) {
@@ -577,5 +552,23 @@ input[type="text"] {
     padding-left: 0%;
     display: flex;
     align-items: center;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 1050px) {
+  .footer {
+    flex-wrap: wrap;
+  }
+  .block__left {
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+  }
+  .block__right {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .navigation {
+    max-height: 100%;
   }
 }
