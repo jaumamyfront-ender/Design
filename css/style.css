@@ -433,6 +433,8 @@ input[type="text"] {
   border-radius: 10px;
   margin-bottom: 12px;
   padding: 10px 15px;
+  font-size: 17px;
+  color: #f3f3f3;
 }
 
 .form input::-webkit-input-placeholder,
@@ -570,5 +572,27 @@ input[type="text"] {
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .navigation {
     max-height: 100%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 567px) {
+  .info__info {
+    display: flex;
+  }
+}
+.form input:focus {
+  border: 2px solid rgb(39, 58, 204);
+}
+.form textarea:focus {
+  border: 2px solid rgb(106, 44, 241);
+}
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  .stylingdescription {
+    font-size: 35px;
+  }
+  .stylingdescription2 {
+    font-size: 35px;
+  }
+  .imagedescr {
+    font-size: 35px;
   }
 }
