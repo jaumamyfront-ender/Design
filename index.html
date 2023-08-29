@@ -1,4 +1,4 @@
-<!DOCTYPE >
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>design</title>
@@ -50,14 +50,39 @@
   </head>
   <body>
     <div class="container">
+      <div class="burger">
+        <div class="header__menu menu">
+          <div class="menu__icon">
+            <span></span>
+          </div>
+          <nav class="menu__body">
+            <ul class="menu__list">
+              <li>
+                <a data-goto=".page__section_1" href="#" class="menu__link"
+                  >News</a
+                >
+              </li>
+              <li>
+                <a data-goto=".page__section_2" href="#" class="menu__link"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a data-goto=".page__section_3" href="#" class="menu__link"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
       <div class="wrapper">
         <div class="header">
           <div class="left__block">
             <img class="prefimg" src="./img/header/head.png" alt="" />
           </div>
           <div class="right__block">
-            <div class="burger"></div>
-            <div class="description__head">
+            <div class="description__head page__section_1">
               <span class="ali">Ali Sayed’s</span>
               <span class="web">Web Designing</span>
               <span class="project">Project</span>
@@ -74,7 +99,7 @@
             </div>
           </div>
         </div>
-        <div class="navigation">
+        <div class="navigation page__section_2">
           <div class="sidebar">
             <div class="block">
               <span class="item__left">Drawingh</span
@@ -156,7 +181,7 @@
           </div>
           <div class="block__right">
             <div class="wr">
-              <div class="say">
+              <div class="say page__section_3">
                 <span class="say-say">Say </span
                 ><span class="sayhello">‘Hello’</span>
               </div>
@@ -201,5 +226,6 @@
         </div>
       </div>
     </div>
+    <script src="./js/script.js"></script>
   </body>
 </html>
